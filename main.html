@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="main_css.css">
+<title>IRCTC Next Generation eTicketing</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+crossorigin="anonymous">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="slides">
+<div id="logo">
+<img src="irc.jpg" id="inrlogo">
+<img src="maho.jpg" id="irctclogo">
+</div>
+<div class="navbar">
+<a href="#" class="btn btn-primary" id="bn">LOGIN</a>
+<a href="http://127.0.0.1:5500/Reg_form.html">REGISTER</a>
+
+<a href="#">AGENT LOGIN</a>
+<a href="http://127.0.0.1:5500/contact_us.html">CONTACT US</a>
+<a href="#">ASK DISHA</a>
+<a href="#" id="alerts">ALERTS</a>
+</div>
+<div class="navbar">
+<a href="#" class="btn btn-primary" id="bn">IRCTC EXCLUSIVE</a>
+<a href="#">TRAINS</a>
+<a href="#">BUSES</a>
+<a href="#">FLIGHTS</a>
+<a href="#">HOTELS</a>
+<a href="#">HOLIDAYS</a>
+<a href="#">ROYALTY</a>
+<a href="#">MEALS</a>
+<a href="#">MORE</a>
+</div>
+<div id="nn">
+<h6 id="pnrs"><a href="#" id="linka" style="text-decoration: none;">PNR STATUS</a></h6>
+<h6 id="ce"><a href="#" id="linka" style="text-decoration: none;">CHARTS/ENQUIRY</a></h6>
+</div>
+<div class="card w-50" id="boxe">
+<div class="card-body">
+<img src="logo.jpg" id="akam">
+<h1 class="card-title" id="bookticket">BOOK TICKET</h1>
+<img src="glob.jpg" id="gto">
+</div>
+<form id="searchForm" onsubmit="return false;">
+<div class="float-container">
+<div class="form-group w-30" id="child1">
+
+<input type="text" class="form-control" placeholder="FROM" id="from" required>
+</div>
+<div class="form-group w-70" id="child2">
+<input type="text" class="form-control" placeholder="dd-mm-yyyy" id="datepicker"
+
+required>
+</div>
+</div>
+<div class="float-container">
+<div class="form-group w-70" id="child3">
+<input type="text" class="form-control" placeholder="TO" id="to" required>
+</div>
+<div class="form-group w-30" id="child4">
+<select class="form-control" id="class">
+<option>ALL CLASSES</option>
+<option>ANUBHUTI CLASS(EA)</option>
+<option>AC FIRST CLASS(1A)</option>
+<option>VISTADOME AC(EV)</option>
+<option>Exec Chair Car(EC)</option>
+</select>
+</div>
+<div class="form-group">
+<select class="form-control" id="concession">
+<option>GENERAL</option>
+<option>LOWER BERTH/S.R CITIZEN</option>
+<option>PERSON WITH DISABILITY</option>
+<option>TATKAL</option>
+<option>PREMIUM TATKAL</option>
+</select>
+</div>
+
+<div class="form-check">
+<input class="form-check-input" type="checkbox" value="" id="disability">
+<label class="form-check-label" for="disability" id="cb1">
+Person with disability consession
+</label>
+<input class="form-check-input" type="checkbox" value="" id="flexible">
+<label class="form-check-label" for="flexible" id="cb2">
+Flexible with date
+</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="checkbox" value="" id="berth">
+<label class="form-check-label" for="berth" id="cb3">
+Train With Avaiable Berth
+</label>
+<input class="form-check-input" type="checkbox" value="" id="pass">
+<label class="form-check-label" for="pass" id="cb4">
+Railway Pass Consession
+</label>
+</div>
+</div>
+<a href="http://127.0.0.1:5500/seat.html" id="searchbtn" class="btn btn-warning
+
+disabled">SEARCH</a>
+
+<a href="#" class="btn btn-success left" id="try">Try Booking In Ask Disha 2.0</a>
+</form>
+</div>
+<div class="card w-50" id="boxf">
+<p id="user">Users are advised to download Official ‘IRCTC Rail Connect’ Apps only from
+Google Play Store or Apple App Store. Please do not use unauthorized links/URLs.</p>
+
+<p id="war">Please check the alert section regarding restoration of AC 3-tier economy fare.</p>
+</div>
+</div>
+<div class="slides" id="slide2">
+<div>
+<h1 id="text2">Have you not found the right one?<br>Find a service suitable for you
+here.</h1>
+</div>
+<div id="imgs">
+<center>
+<img src="full.png" width="1200" height="400" align="left">
+</center>
+</div>
+<div>
+<img src="add.jpg">
+</div>
+</div>
+</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+crossorigin="anonymous"></script>
+<script>
+$(document).ready(function() {
+$('input[type="text"], select').on('input', function() {
+var disabled = false;
+$('input[type="text"], select').each(function() {
+if ($(this).val().trim() === "") {
+disabled = true;
+return false;
+
+}
+});
+$('#searchbtn').toggleClass('disabled', disabled);
+$('#searchbtn').prop('disabled', disabled);
+});
+});
+
+$( function() {
+$( "#datepicker" ).datepicker({
+dateFormat: 'dd-mm-yy'
+});
+});
+</script>
+</body>
+</html>

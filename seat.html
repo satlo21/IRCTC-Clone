@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<title>Search Results - IRCTC Next Generation eTicketing</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+<div class="row">
+<div class="col-md-6 mx-auto">
+<h2 class="text-center mt-3 mb-4">Select Coach and Timing</h2>
+<div class="card">
+<div class="card-body">
+<h5 class="card-title">Coach A</h5>
+<p class="card-text">Timing: 10:00 AM</p>
+<button class="btn btn-primary btn-block" onclick="showSeatSelection()">Select
+
+Seats</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="seatSelectionModal" tabindex="-1" role="dialog" aria-
+labelledby="seatSelectionModalLabel" aria-hidden="true">
+
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+
+<h5 class="modal-title" id="seatSelectionModalLabel">Seat Selection</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<p>Select your desired seats:</p>
+<div class="row">
+<div class="col-md-3">
+<button class="btn btn-outline-success btn-block" onclick="toggleSeat(this)"
+
+id="seat1">Seat 1</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-outline-success btn-block" onclick="toggleSeat(this)"
+
+id="seat2">Seat 2</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-outline-success btn-block" onclick="toggleSeat(this)"
+
+id="seat3">Seat 3</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-outline-success btn-block" onclick="toggleSeat(this)"
+
+id="seat4">Seat 4</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-outline-success btn-block" onclick="toggleSeat(this)"
+
+id="seat5">Seat 5</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-outline-success btn-block" onclick="toggleSeat(this)"
+
+id="seat6">Seat 6</button>
+
+</div>
+<div class="col-md-3">
+<button class="btn btn-outline-success btn-block" onclick="toggleSeat(this)"
+
+id="seat7">Seat 7</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-outline-success btn-block" onclick="toggleSeat(this)"
+
+id="seat8">Seat 8</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-outline-success btn-block" onclick="toggleSeat(this)"
+
+id="seat9">Seat 9</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-outline-success btn-block" onclick="toggleSeat(this)"
+
+id="seat10">Seat 10</button>
+</div>
+</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+<button type="button" class="btn btn-primary" onclick="bookTicket()">Book Ticket</button>
+</div>
+</div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+integrity="sha384-
+UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+crossorigin="anonymous"></script>
+<script>
+let selectedSeats = {};
+
+function toggleSeat(seatBtn) {
+const seatId = seatBtn.id;
+if (selectedSeats[seatId]) {
+delete selectedSeats[seatId];
+seatBtn.classList.remove('btn-danger');
+seatBtn.classList.add('btn-outline-success');
+} else {
+selectedSeats[seatId] = true;
+seatBtn.classList.remove('btn-outline-success');
+seatBtn.classList.add('btn-danger');
+}
+}
+
+function showSeatSelection() {
+$('#seatSelectionModal').modal('show');
+}
+
+function bookTicket() {
+if (Object.keys(selectedSeats).length === 0) {
+
+alert("Please select at least one seat.");
+} else {
+$('#bookingConfirmationModal').modal('show');
+}
+}
+</script>
+
+<div class="modal fade" id="bookingConfirmationModal" tabindex="-1" role="dialog" aria-
+labelledby="bookingConfirmationModalLabel" aria-hidden="true">
+
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="bookingConfirmationModalLabel">Booking Confirmation</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<p>Your booking has been confirmed successfully!</p>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

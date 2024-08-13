@@ -1,0 +1,214 @@
+body {
+    background-image: url("vbf3.png");
+    background: size 800px;
+    background-repeat: no-repeat;
+    }
+    
+    .header {
+    background-color: whitesmoke;
+    color: #213d77;
+    padding: 10px;
+    text-align: center;
+    
+    }
+    .float-container {
+    border: 3px;
+    padding: 15px;
+    }
+    
+    #child1{
+    width: 70%;
+    float: left;
+    padding-right: 2px;
+    }
+    #child2{
+    width: 30%;
+    float: left;
+    }
+    #child3{
+    width: 70%;
+    float: left;
+    }
+    
+    .navbar {
+    background-color: whitesmoke;
+    padding: 5px;
+    color: #213d77;
+    text-align: left;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-decoration: none;
+    }
+    
+    #bn{
+    background-color: #213d77;
+    color: white;
+    }
+    .navbar a {
+    color: #213d77;
+    text-decoration: none;
+    margin: 0px;
+    }
+    
+    .main-content {
+    padding: 20px;
+    }
+    
+    .footer {
+    background-color: white;
+    color: #213d77;
+    padding: 10px;
+    text-align: center;
+    }
+    
+    #bookticket {
+    color: #213d77;
+    margin-right: 157px;
+    }
+    #cb1{
+    padding-right: 5%;
+    font-family:'Times New Roman', Times, serif;
+    color: #213d77;
+    
+    }
+    #cb2{
+    padding-right: 5%;
+    font-family:'Times New Roman', Times, serif;
+    color: #213d77;
+    }
+    #cb3{
+    padding-right: 5%;
+    font-family:'Times New Roman', Times, serif;
+    color: #213d77;
+    }
+    #cb4{
+    padding-right: 5%;
+    font-family:'Times New Roman', Times, serif;
+    color: #213d77;
+    }
+    #inrlogo{
+    height: 5pc;
+    float: left;
+    margin-right: 2px;
+    width: auto;
+    margin-left: 10px;
+    margin-top: 8px;
+    }
+    #irctclogo{
+    height: 5pc;
+    width: auto;
+    float: right;
+    margin-left: 2px;
+    
+    margin-right: 10px;
+    margin-top: 8px;
+    }
+    #alerts{
+    background-color: lightgray;
+    padding-left: 5px;
+    padding-right: 5px;
+    }
+    #box{
+    margin-left: 2px;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    float: left;
+    }
+    #try{
+    float: right;
+    margin-bottom: 8px;
+    margin-right: 5px;
+    }
+    #searchbtn{
+    margin-left: 5px;
+    margin-bottom: 8px;
+    
+    }
+    #user{
+    font-size: small;
+    color: red;
+    margin-left: 5px;
+    }
+    
+    #boxf{
+    margin-top: 15px;
+    }
+    #war{
+    font-size: small;
+    color: blue;
+    margin-left: 5px;
+    }
+    .container{
+    width: 100%;
+    height: 100vh;
+    }
+    .slides{
+    width: 100%;
+    height: 100vh;
+    }
+    #pnrs{
+    text-align: center;
+    color: white;
+    background-color: #213d77;
+    width: 25%;
+    float: left;
+    margin-bottom: 0px;
+    margin-top: 30px;
+    border-right: 1px;
+    }
+    #ce{
+    text-align: center;
+    color: white;
+    
+    background-color: #213d77;
+    width: 25%;
+    float: left;
+    margin-left: 1px;
+    margin-bottom: 0px;
+    margin-top: 30px;
+    }
+    #linka{
+    color: white;
+    }
+    #lop1{
+    color: #213d77;
+    margin-left: 63.5%;
+    }
+    #akam{
+    height: 70px;
+    float: left;
+    margin-right: 0%;
+    border-right: 0px;
+    width: 110px;
+    }
+    #gto{
+    height: 60px;
+    float: right;
+    width: 120px;
+    margin-top: -55px;
+    border-left: 0px;
+    }
+    #text2{
+    
+    margin-top: 75px;
+    text-align: center;
+    }
+    #imgg{
+    margin-right: 60px;
+    }
+    #imgs{
+    margin-top: 50px;
+    margin-left: 100px;
+    }
+    #jj{
+    display: flex;
+    margin-left: 130px;
+    }
+    #jj1{
+    margin-right: 125px;
+    font-weight: bold;
+    }
+    #mvd{
+    margin-right: 100px;
+    width: 100%;
+    }
